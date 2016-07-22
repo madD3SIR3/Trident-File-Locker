@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{357EC292-2ED8-43D8-A7A4-F1C2C50C12F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>app1</RootNamespace>
+    <AssemblyName>app1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DotNetZip\CommonSrc\CRC32.cs" />
+    <Compile Include="DotNetZip\Zip\ComHelper.cs" />
+    <Compile Include="DotNetZip\Zip\EncryptionAlgorithm.cs" />
+    <Compile Include="DotNetZip\Zip\Events.cs" />
+    <Compile Include="DotNetZip\Zip\Exceptions.cs" />
+    <Compile Include="DotNetZip\Zip\ExtractExistingFileAction.cs" />
+    <Compile Include="DotNetZip\Zip\FileSelector.cs" />
+    <Compile Include="DotNetZip\Zip\OffsetStream.cs" />
+    <None Include="Resources\CommandLineSelfExtractorStub.cs" />
+    <None Include="Resources\FolderBrowserDialogEx.cs">
+      <SubType>Component</SubType>
+    </None>
+    <None Include="Resources\PasswordDialog.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Resources\PasswordDialog.Designer.cs">
+      <DependentUpon>PasswordDialog.cs</DependentUpon>
+    </None>
+    <None Include="Resources\WinFormsSelfExtractorStub.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Resources\WinFormsSelfExtractorStub.Designer.cs">
+      <DependentUpon>WinFormsSelfExtractorStub.cs</DependentUpon>
+    </None>
+    <None Include="Resources\ZipContentsDialog.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Resources\ZipContentsDialog.Designer.cs">
+      <DependentUpon>ZipContentsDialog.cs</DependentUpon>
+    </None>
+    <Compile Include="DotNetZip\Zip\Shared.cs" />
+    <Compile Include="DotNetZip\Zip\WinZipAes.cs" />
+    <Compile Include="DotNetZip\Zip\ZipConstants.cs" />
+    <Compile Include="DotNetZip\Zip\ZipCrypto.cs" />
+    <Compile Include="DotNetZip\Zip\ZipDirEntry.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntry.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntry.Extract.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntry.Read.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntry.Write.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntrySource.cs" />
+    <Compile Include="DotNetZip\Zip\ZipErrorAction.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.AddUpdate.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Check.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Events.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Extract.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Read.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Save.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.SaveSelfExtractor.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Selector.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.x-IEnumerable.cs" />
+    <Compile Include="DotNetZip\Zip\ZipInputStream.cs" />
+    <Compile Include="DotNetZip\Zip\ZipOutputStream.cs" />
+    <Compile Include="DotNetZip\Zip\ZipSegmentedStream.cs" />
+    <Compile Include="DotNetZip\Zlib\Deflate.cs" />
+    <Compile Include="DotNetZip\Zlib\DeflateStream.cs" />
+    <Compile Include="DotNetZip\Zlib\GZipStream.cs" />
+    <Compile Include="DotNetZip\Zlib\Inflate.cs" />
+    <Compile Include="DotNetZip\Zlib\InfTree.cs" />
+    <Compile Include="DotNetZip\Zlib\ParallelDeflateOutputStream.cs" />
+    <Compile Include="DotNetZip\Zlib\Tree.cs" />
+    <Compile Include="DotNetZip\Zlib\Zlib.cs" />
+    <Compile Include="DotNetZip\Zlib\ZlibBaseStream.cs" />
+    <Compile Include="DotNetZip\Zlib\ZlibCodec.cs" />
+    <Compile Include="DotNetZip\Zlib\ZlibConstants.cs" />
+    <Compile Include="DotNetZip\Zlib\ZlibStream.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Resources\zippedResources.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PackResources.vbs" />
+    <None Include="Resources\zippedFile.ico" />
+    <Content Include="DotNetZip\Zlib\LICENSE.jzlib.txt" />
+    <Content Include="DotNetZip\Zlib\License.zlib.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PasswordDialog.resx">
+      <DependentUpon>PasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WinFormsSelfExtractorStub.resx">
+      <DependentUpon>WinFormsSelfExtractorStub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ZipContentsDialog.resx">
+      <DependentUpon>ZipContentsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>cscript ..\..\PackResources.vbs</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
